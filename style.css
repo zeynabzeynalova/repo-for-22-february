@@ -32,9 +32,82 @@ input,label{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* Disabled Button */
-  .button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+
+  /* Fun Button Style */
+.button {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595); /* Gradient background */
+    color: white; /* White text */
+    border: 2px solid transparent;
+    border-radius: 50px; /* Rounded pill shape */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+  }
+  
+/* Shiny Gradient Button Style */
+.button {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient from purple to blue */
+    color: white; /* White text */
+    border: 2px solid transparent;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Shiny effect */
+  .button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg);
+    animation: shine 2s infinite;
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+  }
+  
+  /* Active effect */
+  .button:active {
+    transform: scale(0.98); /* Slightly shrink the button */
+  }
+  
+  /* Focus effect */
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 105, 149, 0.6); /* Pink glow on focus */
+  }
+  
+  /* Shiny animation */
+  @keyframes shine {
+    0% {
+      left: -50%;
+      top: -50%;
+    }
+    50% {
+      left: 150%;
+      top: 150%;
+    }
+    100% {
+      left: -50%;
+      top: -50%;
+    }
   }
   
